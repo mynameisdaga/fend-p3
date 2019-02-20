@@ -5,13 +5,17 @@
     <title>Matching Game</title>
     <meta name="description" content="">
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="sweetalert2.all.min.js"></script>
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
 </head>
 <body>
 
     <div class="container">
+
         <header>
             <h1>Matching Game</h1>
         </header>
@@ -23,7 +27,7 @@
                 <li class = "three"></li>
         	</ul>
 
-        	<span class="moves">0 </span> Moves
+        	<br><span class="moves">0</span> Moves
 
             <div id = "timer">0 hours:0 minutes:0 seconds</div>
 
@@ -39,6 +43,7 @@
         </ul>
     </div>
 
+
 <div class="win">
     <span><h3>Congratulations!</h3></span>
     <p>You have just managed to get to the end of the game and your result is as follow: 
@@ -48,6 +53,8 @@
     <p>Would you like to <span class ="bold-it">play again ?</span> Just press the button below.</p>
     <button id="play-again">Master your result !</button>
 </div>
+
+
 
     <script src="js/app.js"></script>
 </body>
