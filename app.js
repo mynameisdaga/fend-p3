@@ -141,35 +141,14 @@ onceAgain.addEventListener("click", function() {
 
 // modal pop-up
 
-const click = document.getElementById("play-again");
-function modal(){
-	if (matched.length === 16){
-		document.getElementById("final-moves").innerHTML = moves;
-    	document.getElementById("final-time").innerHTML = timer.innerHTML;
-		popup.style.display = "block";
-		stopTiming();
-	} 
+function modal () {
+	if (matched.length === 16) {
+		swal ({
+			title: "Congratulations !",
+			html: '<span id = "final-moves"></span>'  + 'moves<br>' + '<span id = "final-time"></span> timing!'
+		})
+	}
 }
-
-// closing modal window when 
-
-click.addEventListener("click", function() {
-	board.innerHTML = ""; 
-	shuffled=shuffle(cards);
-	const time = document.querySelector("#timer");
-	time.innerHTML = "0 hours:0 minutes:0 seconds";
-	
-	letsStart();
-	
-	
-	matched = [];
-	moves = 0 ;
-	movesNewValue.innerHTML = moves;
-	document.querySelector(".one").innerHTML = '<i class="fa fa-star">';
-	document.querySelector(".two").innerHTML = '<i class="fa fa-star">';
-	document.querySelector(".three").innerHTML = '<i class="fa fa-star">';
-	popup.style.display = "none";
-});
 
 // rating function
 
